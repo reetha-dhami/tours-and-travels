@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Travel & Tours</title>
+  
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  />
+  
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap"
+    rel="stylesheet"
+  />
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <button
+      id="menu-bar"
+      class="fas fa-bars"
+      aria-label="Toggle navigation menu"
+      aria-expanded="false"
+      aria-controls="navbar"
+    ></button>
+
+    <a href="#" class="logo" aria-label="Travel Home"><span>T</span>ravel</a>
+
+    <nav class="navbar" id="navbar" role="navigation">
+      <a href="#home" tabindex="0">Home</a>
+      <a href="#book" tabindex="0">Book</a>
+      <a href="#packages" tabindex="0">Packages</a>
+      <a href="#services" tabindex="0">Services</a>
+      <a href="#gallery" tabindex="0">Gallery</a>
+      <a href="#reviews" tabindex="0">Reviews</a>
+      <a href="#contact" tabindex="0">Contact</a>
+    </nav>
+
+    <div class="icons">
+      <button
+        id="search-btn"
+        class="fas fa-search"
+        aria-label="Open search"
+        aria-expanded="false"
+        aria-controls="search-bar"
+      ></button>
+      <button
+        id="login-btn"
+        class="fas fa-user"
+        aria-label="Open login form"
+        aria-expanded="false"
+        aria-controls="login-form"
+      ></button>
+    </div>
+
+    <form action="#" class="search-bar-container" aria-hidden="true" aria-label="Site Search">
+      <input
+        type="search"
+        id="search-bar"
+        name="search"
+        placeholder="Search here..."
+        autocomplete="off"
+        aria-label="Search"
+      />
+      <label for="search-bar" class="fas fa-search" aria-hidden="true"></label>
+    </form>
+  </header>
+
+  <div class="login-form-container" id="login-form" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="login-title" tabindex="-1">
+    <button id="form-close" class="fas fa-times" aria-label="Close login form"></button>
+
+    <form action="#" method="POST" novalidate>
+      <h3 id="login-title">Login</h3>
+      <input
+        type="email"
+        class="box"
+        name="email"
+        placeholder="Enter your email"
+        required
+        autocomplete="email"
+        aria-required="true"
+      />
+      <input
+        type="password"
+        class="box"
+        name="password"
+        placeholder="Enter your password"
+        required
+        autocomplete="current-password"
+        aria-required="true"
+      />
+      <input type="submit" value="Login now" class="btn" />
+      <div>
+        <input type="checkbox" id="remember" name="remember" />
+        <label for="remember">Remember me</label>
+      </div>
+      <p>
+        Forgot password? <a href="#" tabindex="0">Click here</a>
+      </p>
+      <p>
+        Don't have an account? <a href="#" tabindex="0">Register now</a>
+      </p>
+    </form>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="home">
+    <div class="hero-slider">
+      <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80');">
+        <div class="hero-text">
+          <h1>Explore The World</h1>
+          <p>Find your next adventure with us</p>
+          <a href="#book" class="btn">Book Now</a>
+        </div>
+      </div>
+      <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1470&q=80');">
+        <div class="hero-text">
+          <h1>Discover New Places</h1>
+          <p>Make memories that last forever</p>
+          <a href="#packages" class="btn">Our Packages</a>
+        </div>
+      </div>
+      <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1470&q=80');">
+        <div class="hero-text">
+          <h1>Adventure Awaits</h1>
+          <p>Travel with confidence and ease</p>
+          <a href="#services" class="btn">Learn More</a>
+        </div>
+      </div>
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
+    </div>
+  </section>
+
+  <!-- BOOK SECTION -->
+  <section class="book" id="book">
+    <h2 class="section-title">Book Your Trip</h2>
+    <form class="book-form">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Your name" required />
+      </div>
+      <div class="form-group">
+        <label for="email-book">Email</label>
+        <input type="email" id="email-book" placeholder="Your email" required />
+      </div>
+      <div class="form-group">
+        <label for="destination">Destination</label>
+        <select id="destination" required>
+          <option value="">Select destination</option>
+          <option value="paris">Paris</option>
+          <option value="newyork">New York</option>
+          <option value="tokyo">Tokyo</option>
+          <option value="sydney">Sydney</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="date">Travel Date</label>
+        <input type="date" id="date" required />
+      </div>
+      <button type="submit" class="btn">Book Now</button>
+    </form>
+  </section>
+
+  <!-- PACKAGES SECTION -->
+  <section class="packages" id="packages">
+    <h2 class="section-title">Our Packages</h2>
+    <div class="packages-container">
+      <article class="package-card">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Paris" />
+        <div class="package-content">
+          <h3>Paris, France</h3>
+          <p>Experience the romantic city with amazing cuisine and culture.</p>
+          <a href="#book" class="btn">Book Now</a>
+        </div>
+      </article>
+      <article class="package-card">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" alt="Maldives" />
+        <div class="package-content">
+          <h3>Maldives</h3>
+          <p>Relax in the tropical paradise with white sandy beaches and crystal waters.</p>
+          <a href="#book" class="btn">Book Now</a>
+        </div>
+      </article>
+      <article class="package-card">
+        <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=600&q=80" alt="Tokyo" />
+        <div class="package-content">
+          <h3>Tokyo, Japan</h3>
+          <p>Discover modern technology, tradition, and exquisite food culture.</p>
+          <a href="#book" class="btn">Book Now</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section class="services" id="services">
+    <h2 class="section-title">Our Services</h2>
+    <div class="services-container">
+      <div class="service-card">
+        <i class="fas fa-plane-departure"></i>
+        <h3>Flight Booking</h3>
+        <p>Get the best deals on flights worldwide with our trusted partners.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-hotel"></i>
+        <h3>Hotel Booking</h3>
+        <p>Comfortable and affordable stays with options to suit all budgets.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-car"></i>
+        <h3>Car Rentals</h3>
+        <p>Reliable car rentals for your convenience and freedom to explore.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY SECTION -->
+  <section class="gallery" id="gallery">
+    <h2 class="section-title">Gallery</h2>
+    <div class="gallery-grid">
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Paris" />
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=400&q=80" alt="Maldives" />
+      <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=400&q=80" alt="Tokyo" />
+      <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=400&q=80" alt="Sydney" />
+      <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=400&q=80" alt="New York" />
+      <img src="https://images.unsplash.com/photo-1519817650390-64a93db511ee?auto=format&fit=crop&w=400&q=80" alt="Beach" />
+    </div>
+  </section>
+
+  <!-- REVIEWS SECTION -->
+  <section class="reviews" id="reviews">
+    <h2 class="section-title">Customer Reviews</h2>
+    <div class="reviews-container">
+      <div class="review-card">
+        <p>"Amazing service and great prices! My trip was unforgettable."</p>
+        <h4>— Sarah J.</h4>
+      </div>
+      <div class="review-card">
+        <p>"The booking process was easy and the staff were very helpful."</p>
+        <h4>— John D.</h4>
+      </div>
+      <div class="review-card">
+        <p>"I loved the personalized package recommendations. Highly recommend!"</p>
+        <h4>— Emily R.</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact" id="contact">
+    <h2 class="section-title">Contact Us</h2>
+    <form class="contact-form">
+      <div class="form-group">
+        <label for="contact-name">Name</label>
+        <input type="text" id="contact-name" placeholder="Your name" required />
+      </div>
+      <div class="form-group">
+        <label for="contact-email">Email</label>
+        <input type="email" id="contact-email" placeholder="Your email" required />
+      </div>
+      <div class="form-group">
+        <label for="contact-message">Message</label>
+        <textarea id="contact-message" rows="5" placeholder="Your message" required></textarea>
+      </div>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Travel & Tours. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
